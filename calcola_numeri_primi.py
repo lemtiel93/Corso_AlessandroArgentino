@@ -14,8 +14,8 @@ while True:
         if numero%i == 0:
             contatore +=1
             
-    # Con questo if includo anche il numero 1 che è primo
-    if contatore == 2 or numero ==1:
+    # Verifico contatore per vedere se numero è primo
+    if contatore == 2:
         print("Numero Primo ")
         contatore_numeri_primi_trovati +=1
     else:
