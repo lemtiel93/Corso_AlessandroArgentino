@@ -20,5 +20,13 @@ def comprimi_stringa(stringa):
     new_stringa += stringa[-1] + str(count)
     return new_stringa
 
+def inserisci_stringa():
+    while True:
+        stringa = input("Inserisci stringa di soli caratteri ")
+        if stringa.isalpha():
+            return stringa
+        else:
+            continue
+        
+print(comprimi_stringa(inserisci_stringa()))
 
-print(comprimi_stringa("aabbcc"))
