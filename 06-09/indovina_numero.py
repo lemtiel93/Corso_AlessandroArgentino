@@ -1,6 +1,8 @@
 import random
 
-numero = random.randint(1,100)
+def randomizza():
+    numero = random.randint(1,100)
+    return numero
 
 def confronta_numero(num,num_generato):
     if num < num_generato:
@@ -15,7 +17,9 @@ def confronta_numero(num,num_generato):
         
     
 variabile_controllo = False
-while True:
+
+numero = randomizza()
+while variabile_controllo is False:
     try:
         numero_ut = int(input("Inserisci numero: "))
     except:
@@ -23,8 +27,6 @@ while True:
         continue
     
     variabile_controllo = confronta_numero(numero_ut,numero)
-    if variabile_controllo is True:
-        break
     
     
     
