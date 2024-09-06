@@ -1,9 +1,7 @@
-
-
 operatore = int(input("Quale operatore vuoi usare? addizione (1), sottrazione (2), divisione (3), moltiplicazione (4) "))
 
 x = int(input("Inserisci Primo  Numero "))
-y = int(input("Inserisci Secondo Numero" ))
+y = int(input("Inserisci Secondo Numero " ))
 
 if operatore ==1:
     print (x+y)

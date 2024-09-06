@@ -62,5 +62,5 @@ if user == user_check and password == password_check:
 else:
     print("Utente non loggato")
 
-# Stampa nome utente e password
+# Check di nome utente e password
 print(f"User: {user} Password: {password}")
