@@ -14,11 +14,15 @@ class Prodotto:
 class Xbox(Prodotto):
     
     def __init__(self , descrizione , costo_produzione, prezzo_vendita , serie):
-        super.__init__(descrizione , costo_produzione , prezzo_vendita)
+        super().__init__(descrizione , costo_produzione , prezzo_vendita)
         self.serie = serie
 
 class Computer(Prodotto):
     
     def __init__(self , descrizione , costo_produzione, prezzo_vendita , processore):
-        super.__init__(descrizione , costo_produzione , prezzo_vendita)
-        self.serie = processore
+        super().__init__(descrizione , costo_produzione , prezzo_vendita)
+        self.processore = processore
+
+computer = Computer("Mac",20,30,"i7")
+
+print(computer.calcola_profitto())
