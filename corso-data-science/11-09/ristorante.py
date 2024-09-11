@@ -9,8 +9,7 @@ class Ristorante:
             self.menu = {}
         else:
             raise ValueError("Inserisci stringhe")
-        
-            
+                    
     def descrivi_ristorante(self):
         print(f"Sono il ristorante {self.nome} e con cucina {self.tipo_cucina} ")
     
@@ -37,11 +36,15 @@ class Ristorante:
     def aggiungi_al_menu(self, piatto , prezzo):
         if type(piatto) == str and (type(prezzo)== float or type(prezzo)==int):
             self.menu[piatto] = prezzo
+        else:
+            print("errore valore")
         
         
     def togli_dal_menu(self, piatto):
         if type(piatto)== str and piatto in self.menu:
             del self.menu[piatto]
+        else:
+            print("Piatto non trovato")
         
     def stampa_menu(self):
         print(self.menu)
