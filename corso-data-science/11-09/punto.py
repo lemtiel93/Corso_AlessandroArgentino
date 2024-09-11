@@ -2,7 +2,7 @@ class Punto:
     
     def __init__(self,x,y):
         try:
-            if isinstance(x, int) and isinstance(y, int):
+            if type(x == int) and type(y == int):
                 self.x = x
                 self.y = y
         except:
@@ -23,6 +23,8 @@ class Punto:
 
 punto = Punto(5,4)
 
-punto.muovi("a",1)
+if type(punto == Punto):
+    punto.muovi(4,1)
 
-print(punto.distanza_origine())
+if type(punto == Punto):
+    print(punto.distanza_origine())
