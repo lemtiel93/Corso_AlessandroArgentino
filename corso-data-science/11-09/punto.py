@@ -11,7 +11,7 @@ class Punto:
         
     def muovi(self, dx , dy):
         try:
-            if isinstance(dx, int) and isinstance(dy, int):
+            if type (dx == int) and type(dy == int):
                 self.x += dx
                 self.y += dy
         except:
