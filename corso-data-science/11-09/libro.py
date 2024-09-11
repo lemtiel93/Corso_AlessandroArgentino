@@ -16,14 +16,7 @@ class Libro:
         
     def descrizione(self):
         print(f"Titolo: {self.titolo} Autore: {self.autore} Pagine: {self.pagine}")
-            
         
-libro = Libro("Il visconte dimezzato", "ciao", "ciao")
 
-try:
-    if type(libro == Libro):
-        libro.descrizione()
-    else: 
-        print("Errore di tipo")
-except:
-    print("errore")
+           
+        
