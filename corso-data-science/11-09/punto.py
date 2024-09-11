@@ -20,7 +20,7 @@ class Punto:
        
     
     def distanza_origine(self):
-        return sqrt(self.x**2 + self.y**2)
+        return math.sqrt(self.x**2 + self.y**2)
 
 punto = Punto(5,4)
 
