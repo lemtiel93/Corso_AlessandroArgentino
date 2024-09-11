@@ -2,7 +2,7 @@ class Punto:
     
     def __init__(self,x,y):
         try:
-            if isinstance(x, int) and (y, int):
+            if isinstance(x, int) and isinstance(y, int):
                 self.x = x
                 self.y = y
         except:
@@ -11,7 +11,7 @@ class Punto:
         
     def muovi(self, dx , dy):
         try:
-            if isinstance(dx, int) and (dy, int):
+            if isinstance(dx, int) and isinstance(dy, int):
                 self.x += dx
                 self.y += dy
         except:
