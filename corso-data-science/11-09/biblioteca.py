@@ -6,7 +6,7 @@ class Biblioteca:
         self.lista_libri = []
     
     def aggiungi_libro(self, libros):
-        if type(libros == libro.Libro):
+        if type(libros) == libro.Libro:
             self.lista_libri.append(libros)
     
     def stampa_libri(self):
@@ -14,11 +14,22 @@ class Biblioteca:
             lib.descrizione()
 
 biblioteca = Biblioteca()
-libro1 = libro.Libro("prova","prova", 2)
-libro2 = libro.Libro("prova2","prova2", 5)
+try:
+    libro1 = libro.Libro("prova","prova", 2)
+    libro2 = libro.Libro("prova2","prova2", 7)
+except:
+    print("errore")
 
-biblioteca.aggiungi_libro(libro1)
-biblioteca.aggiungi_libro(libro2)
-biblioteca.aggiungi_libro(libro.Libro("prova3", "prova4", 5))
 
-biblioteca.stampa_libri()            
+if type(biblioteca) == Biblioteca:
+    biblioteca.aggiungi_libro(libro1)
+    biblioteca.aggiungi_libro(libro2)
+    biblioteca.aggiungi_libro(libro.Libro("prova3", "prova4", 5))
+    biblioteca.stampa_libri()   
+else:
+    print("errore")  
+
+    
+
+
+    
