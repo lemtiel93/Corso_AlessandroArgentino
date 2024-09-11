@@ -22,7 +22,11 @@ class Computer(Prodotto):
     def __init__(self , descrizione , costo_produzione, prezzo_vendita , processore):
         super().__init__(descrizione , costo_produzione , prezzo_vendita)
         self.processore = processore
+    
+    def get_processore(self):
+        return self.processore
 
 computer = Computer("Mac",20,30,"i7")
 
 print(computer.calcola_profitto())
+print(computer.get_processore())
