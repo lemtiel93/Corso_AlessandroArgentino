@@ -6,7 +6,7 @@ class Biblioteca:
         self.lista_libri = []
     
     def aggiungi_libro(self, libros):
-        if isinstance(libros , libro.Libro):
+        if type(libros == libro.Libro):
             self.lista_libri.append(libros)
     
     def stampa_libri(self):
