@@ -15,8 +15,7 @@ while True:
         else:
             voti.append(int(voto))
             
-    dizionario_voti[nome] = { 'media' :media(voti)
-                             , 'voti' : voti}
+    dizionario_voti[nome] = { 'voti' : voti}
     
     check = input("vuoi continuare (y) o stampare media (media)? ")
     if check== 'media':
