@@ -1,3 +1,5 @@
+# Genera 5 numeri casuali e li salva in un file 
+
 import random
 
 numeri_casuali = random.sample(range(1, 20), 5)
