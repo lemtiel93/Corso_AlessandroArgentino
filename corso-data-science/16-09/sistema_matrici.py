@@ -1,49 +1,47 @@
-import menu
-import random
 import numpy as np
 
-def crea_matrice():
-    dim1 = int(input("Inserisci numero righe "))
-    dim2 = int(input("Inserisci numero colonne "))
+class Matrice:
+    # Costruttore per matrice con numeri casuali da 1 a 10, e righe/colonne specificate da utente
+    def __init__(self, dim1, dim2):
+        if  (type(dim1) == int and dim1 > 0) and (type(dim2) == int and dim2 > 0):
+            self.dim1 = dim1
+            self.dim2 = dim2
+            self.matrice = np.random.randint(0,10, size = (self.dim1, self.dim2))
+        else:
+            raise Exception("Hai sbagliato ad inserire i valori")
+            
+    def trasposta(self):
+        return self.matrice.T
+
+    def somma(self):
+        
+        return np.sum(self.matrice)
+
+    def moltiplicazione(self):
+        
+        self.matrice2 = np.random.randint(0,10, size = (self.dim1, self.dim2))
+        
+        
+        return (self.matrice * self.matrice2)
+
+    def media_elementi(self):
+        return (np.mean(self.matrice))
+
+    def determinante(self):
+        if self.dim1 == self.dim2:
+            return np.round(np.linalg.det(self.matrice))
+        else:
+            return "Impossibile calcolare determinante"
+        
+    def sottomatrice(self):
+        if self.dim1 > 2 and self.dim2 > 2:
+            return (self.matrice[1:-1,1:-1])
+        else:
+            return "Impossibile stampare sottomatrice"
     
-    matrice = np.random.randint(0,10, size = (dim1, dim2))
-    return  matrice
-
-def trasposta():
-    matrice = crea_matrice()
-    print( matrice.T)
-
-def somma():
-    matrice = crea_matrice()
-    print(np.sum(matrice))
-
-def moltiplicazione():
-    dim1 = int(input("Inserisci numero righe "))
-    dim2 = int(input("Inserisci numero colonne "))
-    matrice1 = np.random.randint(0,10, size = (dim1, dim2))
-    matrice2 = np.random.randint(0,10, size = (dim1, dim2))
+    def get_matrice(self):
+        return self.matrice
     
-    print (matrice1 * matrice2)
 
-def media_elementi():
-    matrice = crea_matrice()
-    print (np.mean(matrice))
 
-def determinante():
-    matrice = crea_matrice()
-    print (np.linalg.det(matrice))
-    
-def sottomatrice():
-    matrice = crea_matrice()
-    print(matrice[1:-1,1:-1])
 
-menuogg = menu.Menu("Menù Matrici")
-menuogg.aggiungi_opzioni("1","stampa sotto matrice centrale",sottomatrice)
-menuogg.aggiungi_opzioni("2","Crea matrice e fa trasposta",trasposta)
-menuogg.aggiungi_opzioni("3","Somma tutti gli elementi della matrice creata",somma)
-menuogg.aggiungi_opzioni("4","Genera 2 matrici e le moltiplica",moltiplicazione)
-menuogg.aggiungi_opzioni("5","Fa media elementi matrice",media_elementi)
-menuogg.aggiungi_opzioni("6","Calcola determinante",determinante)
-
-menuogg.visualizza_menu()
-menuogg.scelta_menu()

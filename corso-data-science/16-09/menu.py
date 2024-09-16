@@ -4,11 +4,7 @@ class Menu:
         self.titolo = titolo
         self.opzioni = {}
         
-    # Non accetta 's' come chiava perchè sarà condizione di uscita
     def aggiungi_opzioni(self, chiave , descrizione ,funzione):
-        if chiave.lower() == 's':
-            print("Chiave s non valida")
-            return
         self.opzioni[chiave] = {"descrizione" : descrizione,
                                 "funzione" : funzione}
     
@@ -17,15 +13,13 @@ class Menu:
         for opz in self.opzioni:
             print(opz + ":" , self.opzioni[opz]['descrizione'])
     
-    def scelta_menu(self):
-        while True:
-            self.scelta = input("Fai scelta o chiudi con 's': ")
-            if self.scelta.lower() == 's':
-                break
-            elif self.scelta not in self.opzioni:
-                print("Inserisci Opzione valida")
+    def scelta_menu(self, chiave):
+            
+            self.chiave = chiave
+            if self.chiave not in self.opzioni:
+                return ("Inserisci Opzione valida")
             else:
-                self.opzioni[self.scelta]['funzione']()
+                return self.opzioni[self.chiave]['funzione']()
             
         
         
