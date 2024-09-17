@@ -1,6 +1,7 @@
 import numpy as np
 
 class Matrice:
+    
     # Costruttore per matrice con numeri casuali da 1 a 10, e righe/colonne specificate da utente
     def __init__(self, dim1, dim2):
         if  (type(dim1) == int and dim1 > 0) and (type(dim2) == int and dim2 > 0):
