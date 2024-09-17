@@ -1,30 +1,31 @@
-Nome,Città,Salario in K,Età
-Marco,Milano,88.0,114
-Paperino,Agrate Brianza,86.0,14
-Giovanni,Napoli,97.0,81
-Paperino,Roma,79.0,1
-Pippo,Agrate Brianza,90.0,79
-Giovanni,Roma,63.0,95
-Pippo,Roma,48.0,96
-Pippo,Torino,82.0,96
-Giovanni,Torino,54.0,35
-Pluto,Agrate Brianza,73.0,50
-Marco,Roma,79.0,12
-Pippo,Roma,36.0,44
-Marco,Napoli,20.0,63
-Pluto,Roma,50.0,34
-Giovanni,Roma,83.0,49
-Pippo,Agrate Brianza,57.0,31
-Giovanni,Roma,90.0,90
-Marco,Torino,44.0,10
-Pluto,Agrate Brianza,88.0,79
-Giovanni,Agrate Brianza,90.0,89
-Paperino,Torino,55.0,16
-Giovanni,Torino,72.0,9
-Giovanni,Milano,66.0,49
-Pluto,Roma,99.0,115
-Pippo,Torino,58.0,63
-Pluto,Napoli,64.0,76
-Pluto,Roma,32.0,93
-Giovanni,Napoli,66.0,68
-Pluto,Napoli,69.0,17
+Nome,Città,Salario in K,Età,Categoria Età
+Paperino,Roma,95.0,108,Senior
+Marco,Milano,34.0,98,Senior
+Pippo,Milano,60.0,72,Senior
+Paperino,Milano,82.0,42,Adulto
+Pluto,Agrate Brianza,60.0,112,Senior
+Pippo,Milano,20.0,83,Senior
+Marco,Roma,60.0,85,Senior
+Giovanni,Milano,35.0,41,Adulto
+Pippo,Napoli,68.0,0,Giovane
+Marco,Milano,30.0,32,Adulto
+Pluto,Milano,37.0,62,Adulto
+Pippo,Napoli,82.0,103,Senior
+Giovanni,Torino,40.0,45,Adulto
+Paperino,Milano,48.0,84,Senior
+Pippo,Milano,75.0,26,Adulto
+Giovanni,Agrate Brianza,51.0,103,Senior
+Marco,Napoli,66.0,18,Adulto
+Pluto,Agrate Brianza,55.0,117,Senior
+Paperino,Torino,60.0,54,Adulto
+Paperino,Roma,72.0,12,Giovane
+Paperino,Agrate Brianza,76.0,99,Senior
+Paperino,Roma,46.0,43,Adulto
+Marco,Napoli,64.0,3,Giovane
+Pippo,Torino,77.0,68,Senior
+Giovanni,Torino,23.0,54,Adulto
+Marco,Milano,54.0,24,Adulto
+Pippo,Milano,59.0,86,Senior
+Paperino,Napoli,75.0,25,Adulto
+Marco,Napoli,88.0,86,Senior
+Pippo,Roma,62.0,53,Adulto
