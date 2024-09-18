@@ -27,7 +27,11 @@ class ModelloIris:
         
         print("Valori non scalati",self.X_train[0])
         print("Valori scalati ",self.X_train_scaled[0])
-
+        
+        plt.plot(self.X_train[0],label="Non scalati")
+        plt.plot(self.X_train_scaled[0],label = 'Scalati')
+        plt.legend()
+        plt.show()
     def create_evaluate_model(self):
         self.model.fit(self.X_train, self.y_train)
         self.y_pred = self.model.predict(self.X_test)
@@ -38,13 +42,17 @@ class ModelloIris:
     
     def matrice_confusione(self):
         
-        print("La matrice di confusione è uno strumento utilizzato per valutare le prestazioni di un modello di classificazione.")
-        print("Essa confronta le etichette vere con le etichette previste dal modello, mostrando:")
-        print("- True Positives (TP): Predizioni corrette della classe positiva.")
-        print("- True Negatives (TN): Predizioni corrette della classe negativa.")
-        print("- False Positives (FP): Predizioni errate della classe positiva.")
-        print("- False Negatives (FN): Predizioni errate della classe negativa.")
-        print("Dalla matrice, è possibile calcolare metriche come accuratezza, precisione e richiamo.")
+        print("\nInterpretazione:")
+        print("La matrice di confusione mostra il numero di predizioni corrette e errate per ciascuna classe.")
+        print("Righe = Classi Vere, Colonne = Classi Predette.")
+        print("Esempio di matrice (3 classi):")
+        print("              Predetto")
+        print("            |  0   |  1   |  2   |")
+        print("          -----------------------")
+        print("       0  |  TP0  |  FP01 |  FP02 |  <- Classe vera 0")
+        print("       1  |  FN10 |  TP1  |  FP12 |  <- Classe vera 1")
+        print("       2  |  FN20 |  FN21 |  TP2  |  <- Classe vera 2")
+        print("TP = True Positives, FP = False Positives, FN = False Negatives.")
         self.cm = confusion_matrix(self.y_test, self.y_pred)
 
         sns.heatmap(self.cm, annot=True, fmt='d', cmap='Blues', xticklabels=self.iris.target_names, yticklabels=self.iris.target_names)

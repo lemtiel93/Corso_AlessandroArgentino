@@ -13,6 +13,5 @@ menu.aggiungi_opzioni('3', 'Genera matrie di confusione', wine.matrice_confusion
 
 menu.visualizza_menu()
 menu.scelta_menu('1')
-#menu.scelta_menu('2')
-#menu.scelta_menu('3')
-#menu.scelta_menu('4')
+menu.scelta_menu('2')
+menu.scelta_menu('3')
