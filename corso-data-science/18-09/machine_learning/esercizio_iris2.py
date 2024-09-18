@@ -19,6 +19,7 @@ class ModelloIris:
 
     def split_dataset(self):
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=0.3, random_state=42)
+        print("Forma dataset train",self.X_train.shape, "Forma dataset test", self.X_test.shape)
         
         
     def scala_dati(self):
@@ -32,6 +33,7 @@ class ModelloIris:
         plt.plot(self.X_train_scaled[0],label = 'Scalati')
         plt.legend()
         plt.show()
+        
     def create_evaluate_model(self):
         self.model.fit(self.X_train, self.y_train)
         self.y_pred = self.model.predict(self.X_test)
