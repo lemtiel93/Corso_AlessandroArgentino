@@ -9,7 +9,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-class ModelloIris:
+class ModelloTree:
     def __init__(self,funct):
             self.iris = funct
             self.X = self.iris.data  

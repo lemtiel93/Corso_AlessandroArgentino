@@ -1,8 +1,8 @@
 from sklearn.datasets import load_wine
-from esercizio_iris2 import ModelloIris
+from esercizio_iris2 import ModelloTree
 from menu import Menu
 
-wine = ModelloIris(load_wine())
+wine = ModelloTree(load_wine())
 menu = Menu('Menu modello di machine learning')
 
 menu.aggiungi_opzioni('0','Splitta il dataset', wine.split_dataset)
