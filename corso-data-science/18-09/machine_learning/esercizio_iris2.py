@@ -11,9 +11,9 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 class ModelloIris:
     def __init__(self):
-            iris = load_iris()
-            self.X = iris.data  
-            self.y = iris.target 
+            self.iris = load_iris()
+            self.X = self.iris.data  
+            self.y = self.iris.target 
             self.model = DecisionTreeClassifier()
             self.scaler = StandardScaler()
 
@@ -28,19 +28,21 @@ class ModelloIris:
         self.model.fit(self.X_train, self.y_train)
     
     def evaluate_model(self):
-        self.y_pred = model.predict(X_test)
+        self.y_pred = self.model.predict(self.X_test)
         accuracy = accuracy_score(self.y_test, self.y_pred)
         report = classification_report(self.y_test, self.y_pred, target_names=self.iris.target_names)
         print(f"Accuratezza del modello: {accuracy:.2f}")
         print("Classification Report:\n", report)
     
     def matrice_confusione(self):
-        self.cm = confusion_matrix(y_test, y_pred)
+        self.cm = confusion_matrix(self.y_test, self.y_pred)
 
         sns.heatmap(self.cm, annot=True, fmt='d', cmap='Blues', xticklabels=self.iris.target_names, yticklabels=self.iris.target_names)
         plt.show()
     
-
-    
-   
-
+modello = ModelloIris()
+modello.split_dataset()  
+modello.scala_dati()
+modello.create_model()
+modello.evaluate_model()
+modello.matrice_confusione()
