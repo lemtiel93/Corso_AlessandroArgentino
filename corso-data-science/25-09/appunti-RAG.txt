@@ -1,0 +1,33 @@
+Retrieval-Augmented Generation
+Combina modelli generativi di linguaggio a tecniche recupero info
+Nel contesto OOP viene utilizzata per migliorare le app che richiedono interazione con l'utente, tipo chatbot o sistemi
+di assistenza virtuale.
+
+La RAG è una tecnica che permette di abbinare agli LLM con ricerca di informazioni in tempo reale
+rendendo gli input potenzialmente infiniti.
+
+PUNTI FONDAMENTALI (anche se non può essere divisa in punti)
+Usa un modulo di recupero per cercare documenti rilevanti e poi modulo generazione per costruire risposta basata
+su info.
+
+UML che spiega RAG evidenzia come LLM intervenga solo prima della risposta. La query quindi non va nell' LLM
+e non c'è bisogno di dare contesto perchè la cerca la macchina. La query può essere quindi fatta dalla macchina
+stessa e non per forza col prompt di un umano. Esempio pratico, il pc potrebbe aprirmi Visual Code alle 9 
+di mattina in automatico.
+
+Se la query viene fatta da un umano, per capire il contesto la macchina, visto che non usa LLM, cerca di capire
+la lingua per dare contesto. Viene a crearsi un ciclo potenzialmente infinito quando la response riporta
+un'altra query, e le AI che comunicano tra loro esaminano il contesto.
+
+In fase di addestramento è possibile dare un peso maggiore a certe fonti di dati, (rischio creare AI fondamnetalista)
+Tokenizer tokenizza le parole
+Retriever è un agent che porta informazioni su input a embedding.
+Hugging Face Transformers è un framework che fa NLP.
+
+In questo caso il modello è l'LLM
+Input text: testo di input che necessita risposta
+Input IDs: id dei token che rappresentano il testo di input
+Context Input IDs: gli id dei token dei documenti contestuali trovati. Possono essere trovati ovunque, nel dataset
+di addestramento, nell'input dell'utente, nel web scraping eccetera.
+Generated IDs: gli ID dei token della risposta generata.
+Output Text: la risposta finale LLMizzata. Prima conviene avere solo dati matematici vettoriali per performare al top-
