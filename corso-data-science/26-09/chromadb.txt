@@ -1,0 +1,6 @@
+ci permette di salvare oggetti con persistenza in un archivio astratto. CHromadb viene usato per addestrare le AI.
+
+
+COn database come questi è possibile tenere aggiornati i dati in tempo reale su ciò che è addestrata l'AI.
+
+Consente automazione per l'AI 
